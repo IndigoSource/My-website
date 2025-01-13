@@ -34,16 +34,20 @@ body {
       0 0 10px #fff,
       0 0 20px #fff,
       0 0 30px #fff,
+      0 0 40px #fff
+      0 0 50px #fff
 }
 
 h1 {
   margin: 10px 0;
   color: #ffffff;
   text-shadow: 
-        0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 20px #fff,
-        0 0 30px #fff,
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #fff
+      0 0 50px #fff
 }
 
 .bio {
@@ -52,10 +56,12 @@ h1 {
   color: #ffffff; /* White for the text */
   line-height: 1.5;
   text-shadow: 
-        0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 20px #fff,
-        0 0 30px #fff,
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #fff
+      0 0 50px #fff
 }
 
 .link i {
