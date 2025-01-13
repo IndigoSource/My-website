@@ -41,6 +41,14 @@ h1 {
   font-size: 16px;
   color: #ffffff; /* Subtle gray for the text */
   line-height: 1.5;
+  text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #ff00ff,
+        0 0 30px #ff00ff,
+        0 0 40px #ff00ff,
+        0 0 50px #ff00ff,
+        0 0 60px #ff00ff;
 }
 
 .link i {
