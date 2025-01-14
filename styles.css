@@ -1,0 +1,151 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('img/galaxy.gif') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  width: 60%; /* Keeps the width consistent */
+  max-width: 600px; /* Maintain a maximum width */
+  margin: 0 auto; /* Centers the container */
+  padding: 20px; /* Adds internal spacing */
+  min-height: 750px; /* Ensures the container has enough vertical space */
+  background: #4b0082; /* Optional background */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  box-shadow: 
+    0 0 10px rgb(255, 255, 255), 
+    0 0 30px rgb(255, 255, 255); /* Subtle glow */
+}
+
+
+
+.profile-pic {
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the image circular */
+  border: 3px solid white; /* Adds a solid border */
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8), 
+    0 0 20px rgba(255, 255, 255, 0.6), 
+    0 0 30px rgba(255, 255, 255, 0.4); /* Creates the neon glow */
+}
+
+
+.name-container {
+  position: relative; /* Enables positioning of child elements */
+  text-align: center;
+  display: inline-block; /* Keeps everything together */
+}
+
+h1 {
+  font-size: 36px;
+  color: white; /* Ensures text is visible */
+  margin: 0;
+  position: relative; /* Allows the text to stay in its original flow */
+  z-index: 1; /* Places the text below the GIF */
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Poppins', sans-serif; /* Ensures that headings and text elements use Poppins */
+}
+
+.name-gif {
+  position: absolute; /* Places the GIF over the text */
+  top: 50%; /* Adjusts vertical position */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Ensures perfect centering */
+  width: 100px; /* Adjusts the size of the GIF */
+  height: 40px; /* Maintains the aspect ratio */
+  z-index: 2; /* Ensures the GIF is above the text */
+  animation: pulse 2s infinite; /* Adds a pulsing animation */
+}
+
+/* Animation effect for the GIF */
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+
+.bio {
+  margin-top: 0;
+  font-size: 16px;
+  color: white; /* Text color */
+  line-height: 1.5;
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8), /* Inner glow */
+    0 0 10px rgba(255, 255, 255, 0.6), /* Medium glow */
+    0 0 20px rgba(255, 255, 255, 0.5); /* Outer glow */
+}
+
+.link i {
+  margin-right: 8px; /* Add space between icon and text */
+  font-size: 18px;   /* Adjust icon size */
+}
+
+
+.link-container {
+  display: flex; /* Enables flexbox */
+  flex-wrap: wrap; /* Allows wrapping to create multiple rows */
+  justify-content: center; /* Centers the link boxes horizontally */
+  gap: 20px; /* Adds space between the boxes */
+}
+
+.link {
+  text-align: center;
+  display: flex; /* Makes the link a flex container */
+  align-items: center; /* Vertically aligns image and text */
+  justify-content: flex-start; /* Aligns items to the start */
+  width: 40%; /* Adjust width of each box to fit two in a row */
+  max-width: 300px; /* Limits the max width of each box */
+  padding: 15px 20px; /* Adds internal spacing */
+  text-decoration: none; /* Removes underline */
+  color: white; /* Text color */
+  background-color: #7529ac; /* Background color */
+  border: 2px solid white; /* Adds white outline */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+}
+
+.link-img {
+  margin-right: 10px; /* Adds space between the image and text */
+  width: 20px; /* Adjust size of the image */
+  height: 20px; /* Maintain aspect ratio */
+}
+
+.link:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect on hover */
+}
+
+.discord-status {
+  width: 310px; /* Adjust size as needed */
+  height: 175px; /* Adjust size as needed */
+  margin-top: 20px;
+  border: 3px solid white; /* Adds a solid border */
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8), 
+    0 0 20px rgba(255, 255, 255, 0.6), 
+    0 0 30px rgba(255, 255, 255, 0.4); /* Creates the neon glow */
+}
+
+
+a {
+  color: rgb(0, 225, 255); /* Makes the link text white */
+  text-decoration: none; /* Removes underline */
+}
+
+a:hover {
+  color: #ccc; /* Changes color when hovered */
+}
