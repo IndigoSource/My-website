@@ -24,8 +24,6 @@ body {
     0 0 30px rgb(255, 255, 255); /* Subtle glow */
 }
 
-
-
 .profile-pic {
   width: 150px; /* Adjust size as needed */
   height: 150px; /* Adjust size as needed */
@@ -36,7 +34,6 @@ body {
     0 0 20px rgba(255, 255, 255, 0.6), 
     0 0 30px rgba(255, 255, 255, 0.4); /* Creates the neon glow */
 }
-
 
 .name-container {
   position: relative; /* Enables positioning of child elements */
@@ -67,6 +64,26 @@ h1, h2, h3, h4, h5, h6, p, a {
   animation: pulse 2s infinite; /* Adds a pulsing animation */
 }
 
+.about-gif {
+  position: absolute; /* Places the GIF over the text */
+  top: 50%; /* Adjusts vertical position */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Ensures perfect centering */
+  width: 160px; /* Adjusts the size of the GIF */
+  height: 40px; /* Maintains the aspect ratio */
+  z-index: 2; /* Ensures the GIF is above the text */
+}
+
+.likes-gif {
+  position: absolute; /* Places the GIF over the text */
+  top: 50%; /* Adjusts vertical position */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Ensures perfect centering */
+  width: 100px; /* Adjusts the size of the GIF */
+  height: 40px; /* Maintains the aspect ratio */
+  z-index: 2; /* Ensures the GIF is above the text */
+}
+
 /* Animation effect for the GIF */
 @keyframes pulse {
   0%, 100% {
@@ -76,7 +93,6 @@ h1, h2, h3, h4, h5, h6, p, a {
     transform: translate(-50%, -50%) scale(1.2);
   }
 }
-
 
 .bio {
   margin-top: 0;
@@ -88,6 +104,26 @@ h1, h2, h3, h4, h5, h6, p, a {
     0 0 10px rgba(255, 255, 255, 0.6), /* Medium glow */
     0 0 20px rgba(255, 255, 255, 0.5); /* Outer glow */
 }
+
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #7529ac; /* White button */
+  color: #ffffff; /* Dark text */
+  border: 2px solid #ffffff; /* White border */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #333;
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}  
 
 .link i {
   margin-right: 8px; /* Add space between icon and text */
@@ -139,7 +175,6 @@ h1, h2, h3, h4, h5, h6, p, a {
     0 0 20px rgba(255, 255, 255, 0.6), 
     0 0 30px rgba(255, 255, 255, 0.4); /* Creates the neon glow */
 }
-
 
 a {
   color: rgb(0, 225, 255); /* Makes the link text white */
