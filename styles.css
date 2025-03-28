@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Poppins', sans-serif;
   background: url('img/galaxy.gif') no-repeat center center fixed;
@@ -8,83 +9,96 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .container {
   text-align: center;
-  width: 60%; /* Keeps the width consistent */
-  max-width: 600px; /* Maintain a maximum width */
-  margin: 0 auto; /* Centers the container */
-  padding: 20px; /* Adds internal spacing */
-  min-height: 750px; /* Ensures the container has enough vertical space */
-  background: #4b0082; /* Optional background */
-  border-radius: 15px; /* Rounded corners for a modern look */
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: auto;
+  background: #4b0082;
+  border-radius: 15px;
   box-shadow: 
     0 0 10px rgb(255, 255, 255), 
-    0 0 30px rgb(255, 255, 255); /* Subtle glow */
+    0 0 30px rgb(255, 255, 255);
 }
 
 .profile-pic {
-  width: 150px; /* Adjust size as needed */
-  height: 150px; /* Adjust size as needed */
-  border-radius: 50%; /* Makes the image circular */
-  border: 3px solid white; /* Adds a solid border */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
   box-shadow: 
     0 0 10px rgba(255, 255, 255, 0.8), 
     0 0 20px rgba(255, 255, 255, 0.6), 
-    0 0 30px rgba(255, 255, 255, 0.4); /* Creates the neon glow */
+    0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 .name-container {
-  position: relative; /* Enables positioning of child elements */
+  position: relative;
   text-align: center;
-  display: inline-block; /* Keeps everything together */
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
 h1 {
-  font-size: 36px;
-  color: white; /* Ensures text is visible */
+  font-size: 28px;
+  color: white;
   margin: 0;
-  position: relative; /* Allows the text to stay in its original flow */
-  z-index: 1; /* Places the text below the GIF */
+  position: relative;
+  z-index: 1;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
-  font-family: 'Poppins', sans-serif; /* Ensures that headings and text elements use Poppins */
+  font-family: 'Poppins', sans-serif;
 }
 
-.name-gif {
-  position: absolute; /* Places the GIF over the text */
-  top: 50%; /* Adjusts vertical position */
-  left: 50%; /* Centers horizontally */
-  transform: translate(-50%, -50%); /* Ensures perfect centering */
-  width: 100px; /* Adjusts the size of the GIF */
-  height: 40px; /* Maintains the aspect ratio */
-  z-index: 2; /* Ensures the GIF is above the text */
-  animation: pulse 2s infinite; /* Adds a pulsing animation */
+.name-container h1 {
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  animation: sparkle 2s infinite;
 }
 
-.about-gif {
-  position: absolute; /* Places the GIF over the text */
-  top: 50%; /* Adjusts vertical position */
-  left: 50%; /* Centers horizontally */
-  transform: translate(-50%, -50%); /* Ensures perfect centering */
-  width: 160px; /* Adjusts the size of the GIF */
-  height: 40px; /* Maintains the aspect ratio */
-  z-index: 2; /* Ensures the GIF is above the text */
+@keyframes sparkle {
+  0%, 100% {
+    text-shadow: 
+      0 0 2px #fff,
+      0 0 4px #9400D3,
+      0 0 6px #9400D3,
+      0 0 8px #9400D3;
+  }
+  50% {
+    text-shadow: 
+      0 0 3px #fff,
+      0 0 5px #800080,
+      0 0 7px #800080,
+      0 0 9px #800080;
+  }
 }
 
-.likes-gif {
-  position: absolute; /* Places the GIF over the text */
-  top: 50%; /* Adjusts vertical position */
-  left: 50%; /* Centers horizontally */
-  transform: translate(-50%, -50%); /* Ensures perfect centering */
-  width: 100px; /* Adjusts the size of the GIF */
-  height: 40px; /* Maintains the aspect ratio */
-  z-index: 2; /* Ensures the GIF is above the text */
+@media screen and (min-width: 768px) {
+  .name-container h1 {
+    font-size: 36px;
+  }
 }
 
-/* Animation effect for the GIF */
+@media screen and (max-width: 480px) {
+  .name-container h1 {
+    font-size: 28px;
+  }
+}
+
+.name-gif, .about-gif, .likes-gif {
+  display: none;
+}
+
 @keyframes pulse {
   0%, 100% {
     transform: translate(-50%, -50%) scale(1);
@@ -95,92 +109,266 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .bio {
-  margin-top: 0;
-  font-size: 16px;
-  color: white; /* Text color */
+  font-size: 14px;
+  color: white;
   line-height: 1.5;
   text-shadow: 
-    0 0 5px rgba(255, 255, 255, 0.8), /* Inner glow */
-    0 0 10px rgba(255, 255, 255, 0.6), /* Medium glow */
-    0 0 20px rgba(255, 255, 255, 0.5); /* Outer glow */
+    0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.5);
+  padding: 0 10px;
 }
 
-.learn-more-btn {
+.about-me { 
   display: inline-block;
-  margin-top: 10px;
   padding: 10px 20px;
-  background-color: #7529ac; /* White button */
-  color: #ffffff; /* Dark text */
-  border: 2px solid #ffffff; /* White border */
+  background-color: #7529ac;
+  color: #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
 }
 
-.learn-more-btn:hover {
-  background-color: #333;
-  color: #ffffff;
-  border-color: #ffffff;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+.about-me:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }  
 
 .link i {
-  margin-right: 8px; /* Add space between icon and text */
-  font-size: 18px;   /* Adjust icon size */
+  margin-right: 8px;
+  font-size: 18px;
 }
 
 
 .link-container {
-  display: flex; /* Enables flexbox */
-  flex-wrap: wrap; /* Allows wrapping to create multiple rows */
-  justify-content: center; /* Centers the link boxes horizontally */
-  gap: 20px; /* Adds space between the boxes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 10px;
 }
 
 .link {
+  width: 100%;
+  max-width: none;
+  padding: 12px 15px;
   text-align: center;
-  display: flex; /* Makes the link a flex container */
-  align-items: center; /* Vertically aligns image and text */
-  justify-content: flex-start; /* Aligns items to the start */
-  width: 40%; /* Adjust width of each box to fit two in a row */
-  max-width: 300px; /* Limits the max width of each box */
-  padding: 15px 20px; /* Adds internal spacing */
-  text-decoration: none; /* Removes underline */
-  color: white; /* Text color */
-  background-color: #7529ac; /* Background color */
-  border: 2px solid white; /* Adds white outline */
-  border-radius: 10px; /* Rounded corners */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  background-color: #7529ac;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .link-img {
-  margin-right: 10px; /* Adds space between the image and text */
-  width: 20px; /* Adjust size of the image */
-  height: 20px; /* Maintain aspect ratio */
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .link:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
-.discord-status {
-  width: 310px; /* Adjust size as needed */
-  height: 175px; /* Adjust size as needed */
+.discord-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.discord-pfp {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.discord-info {
+  flex-grow: 1;
+}
+
+.discord-username {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.discord-status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.discord-status-container {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
   margin-top: 20px;
-  border: 3px solid white; /* Adds a solid border */
+  border: 2px solid white;
   box-shadow: 
-    0 0 10px rgba(255, 255, 255, 0.8), 
-    0 0 20px rgba(255, 255, 255, 0.6), 
-    0 0 30px rgba(255, 255, 255, 0.4); /* Creates the neon glow */
+      0 0 10px rgba(255, 255, 255, 0.8), 
+      0 0 20px rgba(255, 255, 255, 0.6), 
+      0 0 30px rgba(255, 255, 255, 0.4);
+  width: 100%;
+  max-width: none;
+  margin: 15px auto;
+  box-sizing: border-box;
 }
 
-a {
-  color: rgb(0, 225, 255); /* Makes the link text white */
-  text-decoration: none; /* Removes underline */
+.spotify-activity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-a:hover {
-  color: #ccc; /* Changes color when hovered */
+.spotify-art {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.spotify-info {
+  flex-grow: 1;
+}
+
+.spotify-song {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.spotify-artist {
+  font-size: 14px;
+  color: #dcddde;
+  margin-bottom: 2px;
+}
+
+.spotify-album {
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.game-info {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.game-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.game-details, .game-state {
+  font-size: 14px;
+  color: #dcddde;
+  margin-bottom: 2px;
+}
+
+.discord-status-indicator.online { background-color: #43b581; }
+.discord-status-indicator.idle { background-color: #faa61a; }
+.discord-status-indicator.dnd { background-color: #f04747; }
+.discord-status-indicator.offline { background-color: #747f8d; }
+
+.spotify-link, .discord-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.spotify-link:hover, .discord-link:hover {
+  color: #dcddde;
+  text-decoration: underline;
+}
+
+/* Media Queries for different screen sizes */
+@media screen and (min-width: 768px) {
+  /* Tablet and desktop styles */
+  .link-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .link {
+    width: 40%;
+  }
+
+  .discord-profile {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .spotify-activity {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .bio {
+    font-size: 16px;
+  }
+
+  .name-container h1 {
+    font-size: 36px;
+  }
+}
+
+/* Additional mobile optimizations */
+@media screen and (max-width: 480px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .name-container h1 {
+    font-size: 28px;
+  }
+
+  .discord-pfp {
+    width: 60px;
+    height: 60px;
+  }
+
+  .spotify-art {
+    width: 50px;
+    height: 50px;
+  }
+
+  .discord-username {
+    font-size: 18px;
+  }
+}
+
+html {
+  height: -webkit-fill-available;
 }
