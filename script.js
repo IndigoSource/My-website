@@ -5,6 +5,7 @@ function updateDiscordStatus() {
             const status = data.data;
             let activityText = '';
 
+            // Check for activities in priority order: Spotify > Gaming > Custom Status
             if (status.spotify) {
                 activityText = `
                     <div class="discord-activity spotify-activity">
@@ -58,6 +59,8 @@ function updateDiscordStatus() {
         .catch(error => console.error('Error fetching Discord status:', error));
 }
 
+// Update initially
 updateDiscordStatus();
 
+// Update every 30 seconds
 setInterval(updateDiscordStatus, 30000);
