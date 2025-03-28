@@ -1,3 +1,3 @@
-# Indi.jno
+# Indi.uno
 
 My test website
